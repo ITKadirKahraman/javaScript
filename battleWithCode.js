@@ -10,7 +10,14 @@ let firstName = ["Kadir", "Melek", "Mihrima Nur", "Sertan", "Sara", "Günther", 
 let lastName = ["Kahraman", "Cosgun", "Kahraman", "Cosgun", "Demir", "Müller", "Zimmermann"];
 let numbers = [5, 2, 4, 3, 1, 7, 6, 10, 13, 8, 9, 12, 11];
 let reverseNumbers = [52, 22, 14, 33, 12, 71, 6, 10, 13, 28, 19, 12, 11, 1];
+let oddEvenNumbers = [5, 2, 4, 3, 1, 7, 6, 10, 13, 8, 9, 12, 11, 52, 22, 14, 33, 12, 71, 6, 10, 13, 28, 19, 12, 11, 1]; 
+let odd = [];
+let even = [];
 let id = [];
+
+/*
+****** dubble loop
+*/
 
 function duppleLoop() {
     for(let i = 0; i < firstName.length; i++){
@@ -29,6 +36,10 @@ function human() {
     }
 }
 
+/*
+****** bubble sort and call function
+*/
+
 function sortNumbers(number) {
     for(let i = 0; i < numbers.length; i++){
         for(let y = 0; y < numbers.length - 1; y++){
@@ -44,8 +55,10 @@ function sortNumbers(number) {
 
 console.log(sortNumbers(numbers));
 
-// first and last name publish 
-// Array rückwärts ausgeben
+/*
+****** first and last name publish Array rückwärts ausgeben
+*/
+
 
 function fullName() {
     for(let i = 0; i < firstName.length; i++){
@@ -62,8 +75,57 @@ function last() {
     return console.log(array);
 }
 
+/*
+****** function ternary operator and call function 
+*/
+
 function  ternaryOperator(n) {
     return n < 5 ? 100 : n >= 5 && n < 10 ? 95 : 90;
 }
 
-console.log(ternaryOperator(8));
+console.log(ternaryOperator(18));
+
+/*
+****** function loop ternary operator array and call function
+*/
+
+function oddEven(numbers) {
+    for(let i = 0; i < numbers.length; i++){
+        numbers[i] % 2 ? odd.push(numbers[i]) : even.push(numbers[i]);
+    }
+    return [odd, even];
+}
+
+console.log(oddEven(oddEvenNumbers));
+
+/*
+****** function loop switch case and call function
+*/
+
+function monthDays(month) {
+    let days = 0;
+    switch(month){
+        case "Januar":
+        case "März":
+        case "Mai":
+        case "Juli":
+        case "August":
+        case "Oktober":
+        case "Dezember":
+            days = 31;
+            break;
+        case "April":
+        case "Juni":
+        case "September":
+        case "November":
+            days = 30;
+            break;
+        case "Februar":
+            days = 28;
+            break;
+    }
+    return days;;
+}
+
+console.log(monthDays("Januar"));
+
