@@ -124,8 +124,87 @@ function monthDays(month) {
             days = 28;
             break;
     }
-    return days;;
+    return days;
 }
 
 console.log(monthDays("Januar"));
 
+/*
+****** ARRAY METHODS CHEAT SHEET 
+*/
+
+/* 
+Definition: füght am Ende des Arrays einen oder mehrere neue Elemente hinzu und verlängert dadurch die länge des Arrays
+Syntax: array.push(elementX,...,elementX);
+Example: 
+*/
+
+let pushArray = [1, 2, 3, 4, 5, 6, 7];
+pushArray.push(1);
+console.log(pushArray); // Output: 1, 2, 3, 4, 5, 6, 7, 1
+
+/* 
+Definition: entfernt am Ende des Arrays das letzte Element
+Syntax: array.pop();
+Example: 
+*/ 
+
+let popArray = [1, 2, 3, 4, 5, 6, 7];
+let lastElemet = popArray.pop();
+console.log(popArray); // Output: 1, 2, 3, 4, 5, 6
+console.log(lastElemet); // Output: 7
+
+/* 
+Definition: entfernt den ersten Element des Arrays
+Syntax: array.shift();
+Example: 
+*/ 
+
+let shiftArray = [1, 2, 3, 4, 5, 6, 7];
+let elemet = shiftArray.shift();
+console.log(shiftArray); // Output: 2, 3, 4, 5, 6
+console.log(elemet); // Output: 1
+
+/* 
+Definition: fügt am Anfang des Arrays einen oder mehrere neue Elemente hinzu
+Syntax: array.unshift(elementX, ..., elementN);
+Example: 
+*/ 
+
+let unshiftArray = [1, 2, 3, 4, 5];
+let unshiftElement = unshiftArray.unshift(2, 11, 5, 88);
+console.log(unshiftArray); // Output: 2, 11, 5, 88, 1, 2, 3, 4, 5
+console.log(unshiftElement); // Output: Length of Array
+
+/* 
+Definition: the elements from first element and later from second array
+Syntax: array.unshift(arrayX, ..., arrayN);
+Example: 
+*/ 
+
+let concatArray = [13, 12, 43, 54, 75];
+let concatElement = concatArray.concat(unshiftArray);
+console.log(concatElement); // Output: 13, 12, 43, 54, 75, 2, 11, 5, 88, 1, 2, 3, 4, 5
+
+/* 
+Definition: call all elements after the parameter or call all elements from start and end counter
+Syntax: array.slice(start, (end));
+Example: 
+*/ 
+
+let sliceArray = [13, 12, 43, 54, 75];
+let sliceArray2 = [13, 12, 43, 54, 75];
+let sliceElement = sliceArray.slice(1);
+let sliceElement2 = sliceArray2.slice(1, 4);
+console.log(sliceElement); // Output: 12, 43, 54, 75
+console.log(sliceElement2); // Output: 12, 43, 54
+
+/*
+Definition: start from element and chance the element with items
+Syntax: array.splice(start, ..., deleteCounter, itemX, itemN);
+Example:
+*/ 
+
+let spliceArray = [13, 12, 43, 54, 75, 100, 231];
+spliceArray.splice(1, 3, 'aa', 'bb', 'cc');
+console.log(spliceArray); // Output: 13, aa, bb, cc, 75, 100, 231
