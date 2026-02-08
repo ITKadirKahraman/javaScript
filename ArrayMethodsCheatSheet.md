@@ -70,7 +70,7 @@ console.log(concatElement); // Output: 13, 12, 43, 54, 75, 2, 11, 5, 88, 1, 2, 3
 ```
 
 6. array.slice()
-- Definition: call all elements after the parameter
+- Definition: call all elements after the parameter or call all elements from start and end counter
 - Syntax: array.slice(start, (end));
 - Example:
 
@@ -78,7 +78,52 @@ console.log(concatElement); // Output: 13, 12, 43, 54, 75, 2, 11, 5, 88, 1, 2, 3
 let sliceArray = [13, 12, 43, 54, 75];
 let sliceArray2 = [13, 12, 43, 54, 75];
 let sliceElement = sliceArray.slice(1);
-let sliceElement2 = sliceArray2.slice(3);
-console.log(sliceElement);
-console.log(sliceElement2);
+let sliceElement2 = sliceArray2.slice(1, 4);
+console.log(sliceElement); // Output: 12, 43, 54, 75
+console.log(sliceElement2); // Output: 12, 43, 54
+```
+
+7. array.splice()
+- Definition: start from element and chance the element with items
+- Syntax: array.splice(start, ..., deleteCounter, itemX, itemN);
+- Example:
+
+```javascript
+let spliceArray = [13, 12, 43, 54, 75, 100, 231];
+spliceArray.splice(1, 3, 'aa', 'bb', 'cc');
+console.log(spliceArray); // Output: 13, aa, bb, cc, 75, 100, 231
+```
+
+8. array.forEach()
+- Definition: Man nutzt forEach(), wenn man etwas mit jedem Element machen, aber kein neues Array erzeugen möchte (z. B. ausgeben, zählen, verändern von externen Variablen)
+- Syntax: array.forEach(callback(currentValue [, index [, array]])[, thisArg])
+- Example:
+
+```javascript
+let arrowArray = [13, 12, 43, 54, 75, 100, 231];
+spliceArray.forEach(element => {
+    console.log(element * 2)
+}); // Output: 26, 24, 86, 108, 150, 200, 462
+```
+
+9. array.map()
+- Definition: create a new array whit the results from updates the elements 
+- Syntax: array.map(callback(currentValue [, index [, array]])[, thisArg]);
+- Example:
+
+```javascript
+let mapArray = [13, 12, 43, 54, 75, 100, 231];
+let newArr = mapArray.map(element => element * 2); 
+console.log(newArr) // [26, 24, 86, 108, 150, 200, 462]
+```
+
+10. array.filter()
+- Definition: checkt all elements and create a new array whit the filter function
+- Syntax: array.filter(callback(currentValue [, index [, array]])[, thisArg]);
+- Example:
+
+```javascript
+let filterArray = [13, 12, 43, 54, 75, 100, 231];
+let newA = mapArray.filter(element => element % 2 == 0); 
+console.log(newA) // [12, 54, 100]
 ```
