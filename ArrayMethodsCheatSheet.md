@@ -34,19 +34,7 @@ console.log(shiftArray); // Output: 2, 3, 4, 5, 6
 console.log(elemet); // Output: 1
 ```
 
-4. array.shift()
-- Definition: entfernt den ersten Element des Arrays
-- Syntax: array.shift();
-- Example: 
-
-```javascript
-let shiftArray = [1, 2, 3, 4, 5, 6, 7];
-let elemet = shiftArray.shift();
-console.log(shiftArray); // Output: 2, 3, 4, 5, 6
-console.log(elemet); // Output: 1
-```
-
-5. array.unshift()
+4. array.unshift()
 - Definition: fügt am Anfang des Arrays einen oder mehrere neue Elemente hinzu
 - Syntax: array.unshift(elementX, ..., elementN);
 - Example:
@@ -58,7 +46,7 @@ console.log(unshiftArray); // Output: 2, 11, 5, 88, 1, 2, 3, 4, 5
 console.log(unshiftElement); // Output: Length of Array
 ```
 
-6. array.concat()
+5. array.concat()
 - Definition: the elements from first element and later from second array
 - Syntax: array.unshift(arrayX, ..., arrayN);
 - Example:
@@ -124,6 +112,73 @@ console.log(newArr) // [26, 24, 86, 108, 150, 200, 462]
 
 ```javascript
 let filterArray = [13, 12, 43, 54, 75, 100, 231];
-let newA = mapArray.filter(element => element % 2 == 0); 
-console.log(newA) // [12, 54, 100]
+let filterArray2 = ["Anna", "Lia", "Sarah", "Melek"];
+let filterA = filterArray.filter(element => element % 2 == 0);
+let filterA2 = filterArray2.filter(filterArray2.length >= 4);
+console.log(filterA); // [12, 54, 100]
+console.log(filterA2); // [Anna, Sarah, Melek]
+```
+
+11. array.find()
+- Definition: create a new array whit the first find perfect match element
+- Syntax: array.filter(callback(currentValue [, index [, array]])[, thisArg]);
+- Example:
+
+```javascript
+let findArray = [13, 12, 43, 54, 75, 100, 231];
+let findA = findArray.find(element => element > 10); 
+console.log(findA) // Output: [13]
+```
+
+12. array.findIndex()
+- Definition: create a new array whit the first find perfect match element and the output is the index from element
+- Syntax: array.findIndex(callback(currentValue [, index [, array]])[, thisArg]);
+- Example:
+
+```javascript
+let findIndexArray = [13, 12, 43, 54, 75, 100, 231];
+let findIndexA = findArray.findIndex(element => element > 10); 
+console.log(findIndexA) // Output: [0]
+```
+
+13. array.every()
+- Definition: the returns is a boolean value the tests all elements from array pass the test by implemented by the provided function 
+- Syntax: array.every(callback(currentValue [, index [, array]])[, thisArg])
+- Example:
+
+```javascript
+let everyArray = [13, 12, 43, 54, 75, 100, 231];
+let everyA = everyArray.every(element => element > 20); 
+console.log(everyA) // Output: false
+let everyArray2 = [43, 54, 75, 100, 231];
+let everyA2 = everyArray2.every(element => element > 20); 
+console.log(everyA2) // Output: true
+```
+
+14. array.some()
+- Definition: the returns is a boolean value the tests all elements from array pass the test by implemented by the provided function 
+- Syntax: array.some(callback(currentValue [, index [, array]])[, thisArg])
+- Example:
+
+```javascript
+let someArray = [13, 12, 43, 54, 75, 100, 231];
+let someA = someArray.some(element => element > 20); 
+console.log(someA) // Output: false
+let someArray2 = [43, 54, 75, 100, 231];
+let someA2 = someArray2.some(element => element > 75); 
+console.log(someA2) // Output: true
+```
+
+15. array.includes()
+- Definition: Determines whether an array includes a certain value among its entries, returning true or false as appropriate. 
+- Syntax: array.includes(valueToFind [, fromIndex])
+- Example:
+
+```javascript
+let includesArray = [13, 12, 43, 54, 75, 100, 231];
+let includesA = includesArray.includes(20); 
+console.log(includesA) // Output: false
+let includesArray2 = [43, 54, 75, 100, 231];
+let includesA2 = includesArray2.includes(231); 
+console.log(includesA2) // Output: true
 ```
