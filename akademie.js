@@ -1,5 +1,5 @@
 /*
-******* DEVELOPER AKADEMIE
+****** DEVELOPER AKADEMIE
 */
 
 /*
