@@ -148,8 +148,8 @@ let myNotGleichGleichBooleanTest = 11 !== 11; // false
 let myNotGleichGleichBooleanTest2 = 15 !== 11; // true
 let myNotGleichGleichBooleanTest3 = "15" !== "20" // true;
 let myNotGleichGleichBooleanTest4 = "35" !== "35" // false;
-let myNotGleichGleichBooleanTest5 = 15 !== "20" // false;
-console.log(myNotGleichGleichBooleanTest5);
+let myNotGleichGleichBooleanTest5 = 15 !== "20" // true;
+console.log(myNotGleichGleichBooleanTest4);
 // !== nicht der selbe value sowie der selbe type: true ansonsten false
 
 
@@ -165,3 +165,143 @@ console.log((6 != 6) || (15 <= 20)); // true
 console.log((7 < 5) == !(10 >= 10)); // true
 console.log((4 >= 4) && (8 < 15) && (3 == 3)); // true 
 console.log(" ");
+
+
+// IF, IF ELSE, ELSE Verzweigung
+
+/*
+    Syntax
+    if(Bedingung) {
+        Ausführen;
+    }else if(Bedingung) {
+        Ausführen;
+    }else {
+        Ausführen;
+    }
+*/
+
+if(myNotGleichGleichBooleanTest4) {
+    console.log("Test Ausgabe 1");
+}else if(myNotGleichGleichBooleanTest) {
+    console.log("Test Ausgabe 2");
+}else if(myNotGleichBooleanTest3){
+    console.log("Test Ausgabe 3");
+}else if (!myNotGleichBooleanTest2) {
+    console.log("Test Ausgabe 4");
+}else {
+    console.log("Hallo");
+}
+
+let ifValue = 135;
+let ifValue2 = 125;
+let ifValue3 = 55;
+let ifValue4 = 125;
+
+if(((5 <= 7) || !(myKleinerGleichBooleanTest)) && ((ifValue2 === ifValue4) || !(ifValue > ifValue3))) {
+    let array = [
+        {firstName: "Kadir", lastName: "Kahraman", age: 33, wealth: "1Billion", peace: "Islam"},
+        {firstName: "Mirhima Nur", lastName: "Kahraman", age: 13, wealth: "School", peace: "Islam"}
+    ];
+
+    let one = {
+        firstName: "Gülay", 
+        lastName: "Kahraman", 
+        age: 50, 
+        wealth: "Home Wife", 
+        peace: "Islam"
+    };
+
+    let two = {
+        firstName: "Köksal", 
+        lastName: "Kahraman", 
+        age: 55, 
+        wealth: "CEO Bodrum Grill", 
+        peace: "Islam"
+    };
+
+    let three = {
+        firstName: "Hallo", 
+        lastName: "Kahraman", 
+        age: 100, 
+        wealth: "Hallo", 
+        peace: "Bald"
+    };
+
+    console.log(array);
+    console.log(array.length);
+    console.log(array.push(one));
+    console.log(array.push(two));
+    console.log(array.push(three));
+    console.log(array.pop());
+}
+
+if (5 < 4) {
+    console.log("Test Ausgabe 5");
+} else if (!3 <= 2){
+    console.log("Ausgabe 6");
+}else {
+    console.log("Hallo");
+}
+
+console.log(" ");
+if(5 <= 10) { // Bedingung ist true
+    console.log("a"); // ausgabe
+}
+
+if(15 == 15) { // Bedingung ist true
+    console.log("b"); // ausgabe
+}
+
+if(20 > 10) { // Bedingung ist true
+    console.log("c"); // ausgabe
+}
+
+if(7 <= 7) { // Bedingung ist true
+    console.log("a"); // ausgabe
+}else {
+    console.log("b"); // übersprungen
+}
+
+if(10 > 5){ // Bedingung ist true
+    console.log("a"); // ausgabe
+}else if(3 < 2){ 
+    console.log("b");
+}else{
+    console.log("c");
+}
+
+if(12 >= 8 && 8 < 9) { // Bedingung ist true
+    console.log("a"); // ausgabe
+} else {
+    console.log("b");
+}
+
+if(3 == 3){ // Bedingung ist true
+    console.log("a"); // ausgabe
+}else if(10 > 20) { 
+    console.log("b");
+}else {
+    console.log("c");
+}
+
+if(6 != 6) { // Bedingung ist false
+    console.log("a"); 
+}else if(!(15 <= 20)) { // Bedingung ist false
+    console.log("b");
+}else {
+    console.log("c"); // ausgabe
+}
+
+if(7 < 5) { // Bedingung ist false
+    console.log("a");
+}else if (!(10 >= 10)) { // Bedingung ist false
+    console.log("b");
+}else {
+    console.log("c"); // ausgabe
+}
+
+if(4 >= 4 && 8 < 15 && 3 == 3) { // Bedingung ist true
+    console.log("a"); // ausgabe
+} else {
+    console.log("b");
+}
