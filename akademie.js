@@ -235,7 +235,7 @@ if(((5 <= 7) || !(myKleinerGleichBooleanTest)) && ((ifValue2 === ifValue4) || !(
     console.log(array.pop());
 }
 
-if (5 < 4) {
+if (5 < 4) { 
     console.log("Test Ausgabe 5");
 } else if (!3 <= 2){
     console.log("Ausgabe 6");
@@ -305,3 +305,47 @@ if(4 >= 4 && 8 < 15 && 3 == 3) { // Bedingung ist true
 } else {
     console.log("b");
 }
+
+// Function Einführung
+
+/*
+    Syntax
+    function name(params) {
+    
+    }
+*/
+
+// JavaScript Basics Abschluss Aufgaben
+
+// Aufgabe 1
+function fullName(firstName, lastName) {
+    return firstName + " " + lastName;
+}
+
+console.log(fullName("Kadir", "Kahraman"));
+
+// Aufgabe 2
+
+function capitalizeLetters(string) {
+    return string.toUpperCase();
+}
+
+console.log(capitalizeLetters("bAnanE"));
+
+// Aufgabe 3
+
+function countCaracters(string) {
+    return string.length;
+}
+
+console.log(countCaracters("Hausaufgaben"));
+
+// Aufgabe 4
+
+function formatToCurrency(dezimal) {
+    let zahl = dezimal.toFixed(2);
+    let summe = zahl.replace(/\./, ",");
+    return summe + "€";
+}
+
+console.log(formatToCurrency(12.5));
