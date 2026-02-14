@@ -310,10 +310,40 @@ if(4 >= 4 && 8 < 15 && 3 == 3) { // Bedingung ist true
 
 /*
     Syntax
-    function name(params) {
-    
+    function name(params) 
+    {
+
     }
 */
+
+function human() {
+    let women = [];
+    let men = [];
+    let humans = [
+        {firstName: "Kadir", lastName: "Kahraman", id: 1, gender: "Men", nationality: "German", city: "Münster", degree: "bachelor", fatih: "Islam"},
+        {firstName: "Mihrima Nur", lastName: "Kahraman", id: 2, gender: "Women", nationality: "German", city: "Münster", degree: "not degree", fatih: "Islam"},
+        {firstName: "Gülay", lastName: "Kahraman", id: 3, gender: "Women", nationality: "Türkiye", city: "Münster", degree: "not degree", fatih: "Islam"},
+        {firstName: "Köksal", lastName: "Kahraman", id: 4, gender: "Men", nationality: "Türkiye", city: "Münster", degree: "not degree", fatih: "Islam"},
+        {firstName: "Melek", lastName: "Cosgun", id: 1, gender: "Women", nationality: "German", city: "Freising", degree: "not degree", fatih: "Islam"},
+        {firstName: "Sertan", lastName: "Cosgun", id: 1, gender: "Women", nationality: "German", city: "Freising", degree: "not degree", fatih: "Islam"},
+        {firstName: "Falah", lastName: "Obadi", id: 1, gender: "Men", nationality: "German", city: "Münster", degree: "master", fatih: "Islam"},
+        {firstName: "Caner", lastName: "Altay", id: 1, gender: "Men", nationality: "German", city: "Münster", degree: "master", fatih: "Islam"}
+    ];
+
+    for(let i = 0; i < humans.length; i++){
+        if(humans[i].gender === "Women"){
+            women.push(humans[i]);
+        }
+
+        if(humans[i].gender === "Men") {
+            men.push(humans[i]);
+        }
+    }
+
+    return [women, men];
+}
+
+console.log(human());
 
 // JavaScript Basics Abschluss Aufgaben
 
