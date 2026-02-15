@@ -316,26 +316,52 @@ if(4 >= 4 && 8 < 15 && 3 == 3) { // Bedingung ist true
     }
 */
 
+let humans = [
+    {id: 1, firstName: "Kadir", lastName: "Kahraman", gender: "Men", nationality: "German", city: "Münster", degree: "bachelor", fatih: "Islam"},
+    {id: 2, firstName: "Mihrima Nur", lastName: "Kahraman", gender: "Women", nationality: "German", city: "Münster", degree: "not degree", fatih: "Islam"},
+    {id: 3, firstName: "Gülay", lastName: "Kahraman", gender: "Women", nationality: "Türkiye", city: "Münster", degree: "not degree", fatih: "Islam"},
+    {id: 4, firstName: "Köksal", lastName: "Kahraman", gender: "Men", nationality: "Türkiye", city: "Münster", degree: "not degree", fatih: "Islam"},
+    {id: 5, firstName: "Melek", lastName: "Cosgun", gender: "Women", nationality: "German", city: "Freising", degree: "not degree", fatih: "Islam"},
+    {id: 6, firstName: "Sertan", lastName: "Cosgun", gender: "Women", nationality: "German", city: "Freising", degree: "not degree", fatih: "Islam"},
+    {id: 7, firstName: "Falah", lastName: "Obadi", gender: "Men", nationality: "German", city: "Münster", degree: "master", fatih: "Islam"},
+    {id: 8, firstName: "Caner", lastName: "Altay", gender: "Men", nationality: "German", city: "Münster", degree: "master", fatih: "Islam"}
+];
+
+let wealth = [
+    {id: 1, bankaccount: 2223341, property: 4},
+    {id: 2, bankaccount: 1, property: 0},
+    {id: 3, bankaccount: 22341, property: 2},
+    {id: 4, bankaccount: 21222, property: 9},
+    {id: 5, bankaccount: 3331, property: 1},
+    {id: 6, bankaccount: 22241, property: 3},
+    {id: 7, bankaccount: 1141, property: 5},
+    {id: 8, bankaccount: 42341, property: 6}
+];
+
+let month = [
+    {id: 1, month: january},
+    {id: 2, month: february},
+    {id: 3, month: march},
+    {id: 4, month: april},
+    {id: 5, month: may},
+    {id: 6, month: june},
+    {id: 7, month: july},
+    {id: 8, month: august},
+    {id: 9, month: september},
+    {id: 10, month: Ooctober},
+    {id: 11, month: november},
+    {id: 12, month: dezember}
+];
+
 function human() {
     let women = [];
     let men = [];
-    let humans = [
-        {firstName: "Kadir", lastName: "Kahraman", id: 1, gender: "Men", nationality: "German", city: "Münster", degree: "bachelor", fatih: "Islam"},
-        {firstName: "Mihrima Nur", lastName: "Kahraman", id: 2, gender: "Women", nationality: "German", city: "Münster", degree: "not degree", fatih: "Islam"},
-        {firstName: "Gülay", lastName: "Kahraman", id: 3, gender: "Women", nationality: "Türkiye", city: "Münster", degree: "not degree", fatih: "Islam"},
-        {firstName: "Köksal", lastName: "Kahraman", id: 4, gender: "Men", nationality: "Türkiye", city: "Münster", degree: "not degree", fatih: "Islam"},
-        {firstName: "Melek", lastName: "Cosgun", id: 1, gender: "Women", nationality: "German", city: "Freising", degree: "not degree", fatih: "Islam"},
-        {firstName: "Sertan", lastName: "Cosgun", id: 1, gender: "Women", nationality: "German", city: "Freising", degree: "not degree", fatih: "Islam"},
-        {firstName: "Falah", lastName: "Obadi", id: 1, gender: "Men", nationality: "German", city: "Münster", degree: "master", fatih: "Islam"},
-        {firstName: "Caner", lastName: "Altay", id: 1, gender: "Men", nationality: "German", city: "Münster", degree: "master", fatih: "Islam"}
-    ];
-
     for(let i = 0; i < humans.length; i++){
         if(humans[i].gender === "Women"){
             women.push(humans[i]);
         }
 
-        if(humans[i].gender === "Men") {
+        if(humans[i].gender === "Men"){
             men.push(humans[i]);
         }
     }
@@ -343,7 +369,25 @@ function human() {
     return [women, men];
 }
 
+function humanWealth() {
+    let complet = [];
+    for(let i = 0; i < humans.length; i++){
+        for(let y = 0; y < wealth.length; y++){
+            if(humans[i].id === wealth[y].id){
+                complet.push({...humans[i], ...wealth[y]});
+            }
+        }
+    }
+
+    return [complet];
+}
+
+function income() {
+    
+}
+
 console.log(human());
+console.log(humanWealth());
 
 // JavaScript Basics Abschluss Aufgaben
 
