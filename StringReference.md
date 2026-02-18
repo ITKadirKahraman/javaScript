@@ -195,3 +195,104 @@ let trimEnd = text14.trimEnd();
 console.log(trimEnd); // Output:      Kadir Kahraman, a Developer.
 console.log(text14.trimEnd()); // Output:     Kadir Kahraman, a Developer.
 ```
+
+13. string.padStart()
+- Definition: Zeichenkette wird x-Mal am Anfang des String(Number umgewandelt in String) hinzugefügt 
+- Syntax: string.padStart(length, "string");
+- Example: 
+
+```javascript
+let text15 = "10";
+let padded = text15.padStart(4, "J");
+console.log(padded); // Output: JJ10
+console.log(text15.padStart(10, "TS")); // Output: TSTSTSTS10
+
+let numb = 5;
+let text16 = numb.toString();
+let padded2 = text16.padStart(10, "PY");
+console.log(padded2);
+```
+
+14. string.padEnd()
+- Definition: Zeichenkette wird x-Mal am End des String(Number umgewandelt in String) hinzugefügt 
+- Syntax: string.padEnd(length, "string");
+- Example: 
+
+```javascript
+let text17 = "10";
+let padded3 = text17.padEnd(4, "J");
+console.log(padded3); // Output: 10JJ
+console.log(text17.padEnd(10, "AS")); // Output: 10ASASASAS
+
+let numb2 = 5;
+let text18 = numb.toString();
+let padded4 = text18.padEnd(10, "Y");
+console.log(padded4); // Output: 5YYYYYYYYY
+```
+
+14. string.padEnd()
+- Definition: Zeichenkette wird x-Mal am End des String(Number umgewandelt in String) hinzugefügt 
+- Syntax: string.padEnd(length, "string");
+- Example: 
+
+```javascript
+let text17 = "10";
+let padded3 = text17.padEnd(4, "J");
+console.log(padded3); // Output: 10JJ
+console.log(text17.padEnd(10, "AS")); // Output: 10ASASASAS
+
+let numb2 = 5;
+let text18 = numb.toString();
+let padded4 = text18.padEnd(10, "Y");
+console.log(padded4); // Output: 5YYYYYYYYY
+```
+
+15. string.repeat()
+- Definition: Zeichenkette wird x-Mal wiedergegeben ohne Veränderungen 
+- Syntax: string.repeat(count);
+- Example: 
+
+```javascript
+let text19 = "Developer ";
+let repeat = text19.repeat(4);
+console.log(repeat); // Output: Developer Developer Developer Developer 
+console.log(text19.repeat(10)); 
+// Output: Developer Developer Developer Developer Developer Developer Developer Developer Developer Developer 
+```
+
+16. string.replace()
+- Definition: Eine neue Zeichenkette wird erstellt mit neuen Values in dem es vorhande ausgewechselt hat  
+- Syntax: string.replace("string", "string");
+- Example: 
+
+```javascript
+let text20 = "Kadir Kahraman, a Developer.";
+let text21 = "Kadir Kahraman, a Developer a good Developer";
+let replace = text20.replace("Developer.", "Cyber Security Engineer.");
+console.log(replace); // Output: Kadir Kahraman, a Cyber Security Engineer.
+console.log(text20.replace("Developer.", "AI Engineer.")); // Output: Kadir Kahraman, a AI Engineer.
+console.log(text20);
+```
+
+16. string.replaceAll()
+- Definition:   
+- Syntax: string.replaceAll("string", "string");
+- Example: 
+
+```javascript
+let text22 = "Kadir Kahraman, a Developer a good Developer";
+let replaceALL = text22.replaceAll("Kadir", "kadir");
+console.log(replaceALL); // kadir Kahraman, a Developer a good Developer
+```
+
+16. string.split()
+- Definition: Splittet die Zeichenkette je nach Value
+- Syntax: string.split("");
+- Example: 
+
+```javascript
+let text23 = "Kadir Kahraman a Developer a good Developer";
+let split = text23.split("");
+let split2 = text23.split(" , ");
+console.log(split); // Output: (43) ['K', 'a', 'd', 'i', 'r', ' ', 'K', 'a', 'h', 'r', 'a', 'm', 'a', 'n', ' ', 'a', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', ' ', 'a', ' ', 'g', 'o', 'o', 'd', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
+```
