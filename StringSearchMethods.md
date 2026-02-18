@@ -25,40 +25,44 @@ console.log(lastIndexOf, lastIndexOf2); // 35 -1
 ```
 
 3. string.search()
-- Definition: gibt die Länge des Strings zurück
+- Definition: The two methods, indexOf() and search(), are equal?
+
+        They accept the same arguments (parameters), and return the same value?
+
+        The two methods are NOT equal. These are the differences:
+        
+        The search() method cannot take a second start position argument.
+        The indexOf() method cannot take powerful search values (regular expressions).
+        You will learn more about regular expressions in a later chapter.
 - Syntax: string.search();
 - Example: 
 
 ```javascript
-let text = "AHZSGNYHSUIWQKSMSB";
-let laenge = text.length;
-console.log(laenge); // Output: 18
-console.log(text.length; // Output: 18
+let text31 = "Kadir Kahraman, a Developer a good Developer";
+let search = text30.search("good");
+console.log(search); // Output: 30
 ```
 
 4. string.match()
-- Definition: Gibt den Zeichen der angegeben Position zurück
+- Definition: 
 - Syntax: string.charAt();
 - Example: 
 
 ```javascript
-let text2 = "Hello World!";
-let zeichen = text2.charAt(0);
-let zeichen2 = text2.charAt(6);
-console.log(zeichen+ " " + zeichen2); // Output: H W
-console.log(text.charAt(5) + " " + text2.charAt(2)); // Output: N l
+let text30 = "Kadir Kahraman, a Developer a good Developer";
+let match = text30.match("per");
+console.log(match); // Output: 24
 ```
 
 5. string.matchAll()
-- Definition: gibt die Länge des Strings zurück
-- Syntax: string.length;
+- Definition: 
+- Syntax: string.matchAll();
 - Example: 
 
 ```javascript
-let text = "AHZSGNYHSUIWQKSMSB";
-let laenge = text.length;
-console.log(laenge); // Output: 18
-console.log(text.length; // Output: 18
+let text29 = "Kadir Kahraman, a Developer a good Developer";
+let matchAll = text29.matchAll("Kahraman");
+console.log(matchAll); // Output: true
 ```
 
 6. string.includes()
@@ -68,7 +72,7 @@ console.log(text.length; // Output: 18
 
 ```javascript
 let text28 = "Kadir Kahraman, a Developer a good Developer";
-let includes = text28.startsWith("Kahraman");
+let includes = text28.includes("Kahraman");
 console.log(startsWith); // Output: true
 ```
 
