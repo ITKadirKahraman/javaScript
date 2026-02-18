@@ -296,3 +296,14 @@ let split = text23.split("");
 let split2 = text23.split(" , ");
 console.log(split); // Output: (43) ['K', 'a', 'd', 'i', 'r', ' ', 'K', 'a', 'h', 'r', 'a', 'm', 'a', 'n', ' ', 'a', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', ' ', 'a', ' ', 'g', 'o', 'o', 'd', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
 ```
+
+17. string.toString()
+- Definition: in ein String umwandeln, verändert nicht ein bestehendes String, kann aber ein Object String in ein String umwandeln
+- Syntax: string.toString();
+- Example: 
+
+```javascript
+let text32 = 32155;
+let toString = text32.toString();
+console.log(toString); // Output: "32155"
+```
