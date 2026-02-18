@@ -1,4 +1,4 @@
-STRING REFERENCE CHEAT SHEET 
+STRING METHODS CHEAT SHEET 
 
 1. string.length
 - Definition: gibt die Länge des Strings zurück
