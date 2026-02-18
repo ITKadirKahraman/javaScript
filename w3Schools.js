@@ -1,5 +1,5 @@
 /*
-****** STRING REFERENCE
+****** STRING METHODS and SEARCH
 */
 
 // length
@@ -150,3 +150,35 @@ let text23 = "Kadir Kahraman a Developer a good Developer";
 let split = text23.split("");
 let split2 = text23.split(" , ");
 console.log(split); // Output: (43) ['K', 'a', 'd', 'i', 'r', ' ', 'K', 'a', 'h', 'r', 'a', 'm', 'a', 'n', ' ', 'a', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', ' ', 'a', ' ', 'g', 'o', 'o', 'd', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
+
+// indexOf()
+
+let text24 = "Kadir Kahraman, a Developer a good Developer";
+let indexOf = text24.indexOf("Developer");
+let indexOf2 = text24.indexOf();
+console.log(indexOf, indexOf2); // 18 -1
+
+// lastIndexOf()
+
+let text25 = "Kadir Kahraman, a Developer a good Developer";
+let lastIndexOf = text25.lastIndexOf("Developer");
+let lastIndexOf2 = text25.lastIndexOf();
+console.log(lastIndexOf, lastIndexOf2); // 35 -1
+
+// endsWith()
+
+let text26 = "John Doe";
+let endWith = text26.endsWith("Doe");
+console.log(endWith); // Output: true
+
+// startsWith()
+
+let text27 = "John Doe";
+let startsWith = text27.startsWith("John");
+console.log(startsWith); // Output: true
+
+// includes()
+
+let text28 = "Kadir Kahraman, a Developer a good Developer";
+let includes = text28.startsWith("Kahraman");
+console.log(startsWith); // Output: true
