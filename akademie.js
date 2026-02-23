@@ -3,7 +3,7 @@
 */
 
 /*
-****** JAVASCRIPT
+****** IN JAVASCRIPT ist alles ein Objekt
 */
 
 /*
@@ -306,14 +306,165 @@ if(4 >= 4 && 8 < 15 && 3 == 3) { // Bedingung ist true
     console.log("b");
 }
 
-// Function Einführung
+// Function Einführung, Parameter sowie Return
 
 /*
     Syntax
-    function name(params) 
-    {
 
+    INPUT -> ALGORITHMUS -> OUTPUT
+
+    function funktionsname(input) 
+    {
+        algorithmus
+        return ist output
     }
+
+*/
+
+let price = 5000;
+let discount = 50;
+
+function logCalculatedPrice() {
+    console.log((price - discount) * 1.19);
+}
+
+logCalculatedPrice(); // Funktionsaufruf für die Ausführung der Funktion
+
+function logCalculatedPrice2(prices, discounts, tax, string) {
+    console.log((prices - discounts) * tax + string);
+}
+
+logCalculatedPrice2(2500000, 500000, 1.19, "€"); 
+// Funktionsaufruf für die Ausführung der Funktion mit Parameter, Reihenfolge der Parameter ist sehr wichtig
+
+
+// Funktion hat Parameter und gibt mit Return was zurück
+function fullPrices(price, discount, tax, string) {
+    return (price - discount - discount) * tax + string;
+}
+
+// Funktion wird Aufgerufen und in der Konsole ausgegeben
+console.log(fullPrices(10000, 50, 6500, 1.19, "€"));
+
+
+// Funktion weist mehrere Parameter auf und gibt zwei Scope Variablen zurück mit Values
+function fullPerson(firstName, lastName, price, discount, tax) {
+    let fullName = firstName + " " + lastName;
+    let value = (price - discount) * tax;
+    return fullName + " " + value;
+}
+
+// Funktion wird Aufgerufen und in der Konsole ausgegeben
+console.log(fullPerson("Kadir", "Kahraman", 10000, 100, 0.19));
+
+
+// OBJECTS Einführung, Listen haben Attribute und Elemente
+
+/*
+    Syntax
+
+    Objekt ist eine Liste von Key Values Pairs
+
+    let object = {
+        key: value;
+    }
+
+    Bei einem String, kann meine eine Funktion deklaieren braucht kein Funktionnamen man kann aber Parameter deklaieren
+*/
+
+let myFancyObject = {
+    age: 32,
+    height: 173,
+    name: "Kevin"
+}
+
+let person1 = {
+    firstName: "Kadir",
+    lastName: "Kahraman",
+    bornYear: 1993,
+    gender: "Men",
+    fatih: "Islam",
+    dagree: "Computer Science",
+    natonality: "German",
+    city: "Münster"
+}
+
+let person2 = {
+    bornYear: 1993,
+    string : function (firstName, lastName, gender, fatih, dagree, natonality, city) {
+        let fullName = firstName + " " + lastName;
+        let personAttributs = "is a" + " " + gender +  " " + "a fatih is" + " " + fatih + " " +"a dagree is" + " " +  dagree + " " +"and nationality" + " " + natonality + " " +"and live in" + " " + city;
+        return fullName + " " + personAttributs;
+    }
+}
+
+console.log(myFancyObject);
+console.log(myFancyObject.name)
+console.log(myFancyObject["age"]);
+console.log(person1);
+console.log(person2.string("Melek", "Cosgun", "Women", "Islam", "Ausbildung", "German", "Freising"));
+
+// STRING FUNKTIONEN
+
+/*
+    Syntax
+
+    string.funktion();
+    - length
+    - trim()
+    - trimStart()
+    - trimEnd()
+
+    weitere Methoden bei w3schools vorhanden sowie in dein GitHub
+*/
+
+let stringLeangth = "Kadir Kahraman is a good Computer Engineer, he loves Developing Coding.   "
+console.log(stringLeangth.trimEnd()); // schneidet Leerzeichen am Ende ab
+console.log(stringLeangth.length); // gibt die Länge des Strings
+
+
+/*
+******* ÜBUNGEN
+*/
+
+
+// WIEDERHOLUNG
+
+// Aufgabe 1
+function fullName2(firstName, lastName) {
+    let fullName = firstName + " " + lastName;
+    return fullName;
+}
+
+console.log(fullName2("Murat", "Kahraman"));
+
+// Aufgabe 2
+function upperCase(string) {
+    let stringUpperCase = string.toUpperCase();
+    return stringUpperCase;
+}
+
+console.log(upperCase("murat kahraman"));
+
+// Aufgabe 3
+function countCaracters2(string) {
+    let count = string;
+    return count.length;
+}
+
+console.log(countCaracters2("Ich bin der Inteligentieste Türke in Münster."));
+
+// Knacker Aufgabe
+function euro(number) {
+    let value = number.toFixed(2);
+    let summe = value.replace(/\./,",");
+    return summe + "€";
+}
+
+console.log(euro(2981.92822));
+
+/*
+******  TUN
 */
 
 let humans = [
@@ -339,19 +490,43 @@ let wealth = [
 ];
 
 let month = [
-    {id: 1, month: january},
-    {id: 2, month: february},
-    {id: 3, month: march},
-    {id: 4, month: april},
-    {id: 5, month: may},
-    {id: 6, month: june},
-    {id: 7, month: july},
-    {id: 8, month: august},
-    {id: 9, month: september},
-    {id: 10, month: Ooctober},
-    {id: 11, month: november},
-    {id: 12, month: dezember}
+    {id: 1, month: "january", days: 30},
+    {id: 2, month: "february", days: 28},
+    {id: 3, month: "march", days: 30},
+    {id: 4, month: "april", days: 31},
+    {id: 5, month: "may", days: 30},
+    {id: 6, month: "june", days: 31},
+    {id: 7, month: "july", days: 30},
+    {id: 8, month: "august", days: 31},
+    {id: 9, month: "september", days: 31},
+    {id: 10, month: "october", days: 30},
+    {id: 11, month: "november", days: 30},
+    {id: 12, month: "dezember", days: 31}
 ];
+
+let multipleSourcesOfIncome = [
+    {souces: "employee"},
+    {souces: "freelancing"},
+    {souces: "independence"},
+    {sources: "entrepreneur"},
+    {sources: "partTimeJob"},
+    {sources: "trade"},
+    {sources: "property"},
+    {sources: "shares"},
+    {sources: "contentCreation"},
+    {sources: "stateTransferPayments"}
+];
+
+function revenue() {
+    
+}
+
+function incomeMonth() {
+    for(let i = 0; i < month.length; i++){
+
+    }
+}
+
 
 function human() {
     let women = [];
