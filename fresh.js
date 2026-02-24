@@ -24,13 +24,12 @@ function monthy( monthy) {
             days = 29;
     }
 
-    return days;
+    return monthy;
 }
 
-function income() {
-    let number = 0;
-    if(number == monthy()){
-
+function income(number) {
+    if(number == month()){
+        
     }
 }
 
@@ -38,7 +37,7 @@ let arrayA = [4, 8, 2, 3, 1, 5, 9, 15, 10, 12, 11, 6, 7, 13, 14];
 
 function loop(array) {
     for(let i = 0; i < arrayA.length; i++){
-        for(let y = 0; y < arrayA - 1; y++){
+        for(let y = 0; y < arrayA.length + 1; y++){
             if(array[y] > array[y + 1]){
                 let temp = array[y];
                 array[y] = array[y + 1];
@@ -53,94 +52,34 @@ function loop(array) {
 console.log(loop(arrayA));
 
 
-function cutIt(arr){
-  let short = arr[0];
-  let ar = [];
-  
-  for(let i = 0; i < arr.length; i++){
-    if(short.length > arr[i].length){
-      short = arr[i];
-    }
-  }
-  
-  for(let i = 0; i < arr.length; i++){
-    ar.push(arr[i].slice(0, short.length));
-  }
-  
-  return ar;
-}
-
-
-function firstToLast(str,c){
-  let first = str.indexOf(c);
-  let last = str.lastIndexOf(c);
-  
-  if(first === -1){
-    return -1;
-  }
-  
-  if(first === last){
-    return 0;
-  }
-  
-  return last - first;
-}
-
-
-function animal(obj){
-  return "This" + " " + obj.color + " " + obj.name + " " + "has" + " " + obj.legs + " " + "legs.";
-}
-
-function saleHotdogs(n){
-  return n < 5 ? 100 * n : n >= 5 && n < 10 ? 95 * n : 90 * n; 
-}
-
-function howManydays(month){
-  let days = 0;
-  switch(month){
-      case 1:
-      case 3:
-      case 5:
-      case 7:
-      case 8:
-      case 10:
-      case 12:
-        days = 31;
-        break;
-      case 4:
-      case 6:
-      case 9:
-      case 11:
-        days = 30;
-        break;
-      case 2:
-        days = 28;
-  }
-  
-  return days;
-}
-
-function pickIt(arr){
-  let odd = [], even = [];
+function grabDoll(dolls){
+  var bag=[];
   //coding here
-  for(let i = 0; i < arr.length; i++){
-    arr[i] % 2 === 0 ? odd.push(arr[i]) : even.push(arr[i]); 
+  for(let i = 0; i < dolls.length; i++){
+    if(dolls[i] !== 'Hello Kitty' && dolls[i] !== 'Barbie doll'){
+      continue;
+    }
+    bag.push(dolls[i]);
+    
+    if(bag.length === 3){
+      break;
+    }
+  }
+  return bag;
+}
+
+function giveMeFive(obj){
+  //coding here
+ let value = [];
+  for(let key in obj){
+    if(key.length === 5){
+      value.push(key);
+    }
+    
+    if(obj[key].length === 5){
+      value.push(obj[key]);
+    }
   }
   
-  return [even, odd];
+  return value;
 }
-
-let temporaryOperator = ["kshas", "kaisa", "jsa", "jaaa", "sqwosjow", "oswjdaaaasidqq", "jwopdoajwd1", "wjcca12s"];
-let temporaryOperator2 = ["kshs", "kajsisa", "js", "jaaaaa", "sqwssosjow", "oswjdsidqq", "kisjhsopdoajwd1", "wjioadwjcca12s"];
-
-// sortiert nach lexikografisch (1. Zeichen für Zeichen 2. Von links nach rechts 3. Anhand des Uniode Werts jedes Zeichens)
-function temporary(string, string2) {
-    let result = [];
-    for(let i = 0; i < temporaryOperator.length; i++){
-        result.push(string[i] > string2[i] ? string[i] : string2[i]);
-    }
-
-    return result;
-}
-
-console.log(temporary(temporaryOperator, temporaryOperator2));
