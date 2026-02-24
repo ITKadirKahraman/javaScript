@@ -83,3 +83,36 @@ function giveMeFive(obj){
   
   return value;
 }
+
+
+function cutIt(arr){
+  //coding here...
+  let short = arr[0];
+  let ar = [];
+  for(let i = 0; i < arr.length; i++){
+    if(short.length > arr[i].length){
+      short = arr[i];
+    }
+  }
+  
+  for(let i = 0; i < arr.length; i++){
+    ar.push(arr[i].slice(0 ,short.length));
+  }
+  return ar;
+}
+
+function firstToLast(str,c){
+  //coding here..
+  let first = str.indexOf(c);
+  let last = str.lastIndexOf(c);
+  
+  if(first === -1){
+    return -1;
+  }
+  
+  if(first === last){
+    return 0;
+  }
+    
+  return last - first;
+}
