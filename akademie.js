@@ -527,6 +527,20 @@ function incomeMonth() {
     }
 }
 
+let temporaryOperator = ["kshas", "kaisa", "jsa", "jaaa", "sqwosjow", "oswjdaaaasidqq", "jwopdoajwd1", "wjcca12s"];
+let temporaryOperator2 = ["kshs", "kajsisa", "js", "jaaaaa", "sqwssosjow", "oswjdsidqq", "kisjhsopdoajwd1", "wjioadwjcca12s"];
+
+// sortiert nach lexikografisch (1. Zeichen für Zeichen 2. Von links nach rechts 3. Anhand des Uniode Werts jedes Zeichens)
+function temporary(string, string2) {
+    let result = [];
+    for(let i = 0; i < temporaryOperator.length; i++){
+        result.push(string[i] > string2[i] ? string[i] : string2[i]);
+    }
+
+    return result;
+}
+
+console.log(temporary(temporaryOperator, temporaryOperator2));
 
 function human() {
     let women = [];
@@ -598,3 +612,71 @@ function formatToCurrency(dezimal) {
 }
 
 console.log(formatToCurrency(12.5));
+
+/*
+******  DAS DOM (Document Object Model)
+******  gilt als Schnittstelle zwischen HTML und dynamischem JavaScript
+******  alle Elemente werden zu Objekten, die dynamisch aufgerufen, verändert, hinzugefügt und gelöscht werden können
+*/
+
+/*
+****** DOM Manipulationsfunktionen
+****** document.getElementById, innerHTML, innerText
+*/
+
+// getElementById(id) (gebe Element über die ID)
+// .innerHTML (gibt das Innere vom HTML zurück)
+let title = document.getElementById('website_title').innerHTML;
+console.log(title);
+title = title.innerHTML = "Kadir Kahraman verändert Titel."
+console.log(title);
+
+// Opertiert innerhalb der Struktur vom HTML und kann ganze Tags hinzufügen/ändern
+document.getElementById('test_id').innerHTML = "<p>Das ist der Hauptcontainer.</p><script></script>";
+
+// innerText fügt es als reiner Text hinzu und kann vorhandene Texte ändern
+document.getElementById('test_id2').innerText = "Das ist ein neuer Text.";
+
+// Button hinzufügen
+// Aufgabe 1
+// Erstelle mit Hilfe von JavaScript einen Button innerhalb einer div.
+// Tipp: Im besten Fall bekommt der Button hier schon eine id.
+// Aufgabe 2
+// Füge diesem Button wieder mit Hilfe von JavaScript den Text hinzu "Klick mich"
+document.getElementById('buttonTest').innerHTML = "<button id='buttonId'>Klick mich.</button>";
+// document.getElementById('buttonTest').innerText = "Klick mich"; bei dieser Variante, verschindet der innerHTML
+
+// .classList mit add, remove und toggle
+document.getElementById('test_id2').classList.add('blue_bg');
+document.getElementById('test_id2').classList.remove('blue_bg');
+document.getElementById('test_id').classList.toggle('blue_bg');
+document.getElementById('buttonTest').classList.add('green_bg');
+// document.getElementById('buttonTest').style.borderColor('blue');
+
+// setAttribute und value
+// setAttribut kann alle Attribute von HTML Tags ändern
+document.getElementById('inputId').setAttribute('type', 'text');
+document.getElementById('inputId').setAttribute('value', 'Hallo, ich bin Kadir');
+
+document.getElementById('input_Id').value = 12032;
+
+// setAttribut Aufgaben
+// Aufgabe 3: Erstelle ein p-Tag mit einer selbst gewählten id und Inhalt
+// Aufgabe 4: Füge mit JavaScript dem p-Tag einen title hinzu.
+// Aufgabe 5 und 6: Probiere es aus und füge jeweils mit setAttribut und classList jeweils eine Klasse hinzu
+// Als Entwickler ist es wichtig, dass du sachen ausprobierst, dass macht ein Entwickler aus
+document.getElementById('aufgabe').innerHTML = "<p id='aufgabeP' title='Freiheit für P'>Ich bin ein Textaufgabe.</p>"
+document.getElementById('aufgabeP').setAttribute('class', 'test_class');
+document.getElementById('aufgabe').classList.add('testClass');
+
+
+// Aufgabe 7
+/*
+Erstelle im CSS eine Klasse d_none, diese sollte "display: none", beinhalten.
+Bau nun eine Funktion, die die Klasse "d_none" mit classList.toggle() hinzufügt/entfernt bei einem beliebigen HTML Element.
+Hinweis: Beliebig heißt hier, dass die id aus dem Parameter der Funktion genommen wird.
+*/
+
+function cssClassAddOrRemove(id) {
+   return document.getElementById(id).classList.toggle('d_none');
+}
