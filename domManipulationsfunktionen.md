@@ -30,4 +30,16 @@ von Knoten sowie das Ändern von Attributen (setAttribute) und Stilen (sytel, cl
 - element.classList.remove('className'): Entfernt eine CSS-Klasse.
 - element.classList.toggle('className'): Wechselt zwischen Hinzufügen und Entfernen einer Klasse.
 
-  
+5. Elemente löschen und ersetzen
+- element.remove(): Entfernt das Element direkt aus dem DOM.
+- parentNode.removeChild(childNode): Entfernt ein spezifisches Kindelement.
+- parentNode.replaceChild(newNode, oldNode): Ersetz ein altes Kindelement durch ein neues.
+
+```javascript
+// Ein neues Element erstellen
+const newDiv = document.createElement("div");
+newDiv.textContent = "Ich bin ein neu erzeugter Div mit einem Textinhalt.";
+
+// Ein vorhandenes Element auswählen und das neue Element anhängen
+document.appendChild(newDiv);
+```
