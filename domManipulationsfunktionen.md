@@ -45,7 +45,7 @@ document.appendChild(newDiv);
 ```
 
 5. Events für die Durchführung von Ereignisse
-- onclick="funktion('id')": Beim Klicken wird eine Funktion durchgeführt
+- onclick="funktion('id')": Beim Klicken wird eine Funktion durchgeführt     
 - onkeydown(funktion): Bei drücken der Taste, wird das Event ausgelöst (zB in Input Tag)
 - onkeyup(funktion): Nach dem drücken einer Taste, wird das Ereigniss ausgelöst
 - onfocus(funktion): Wird beim fokussieren des Tag´s ausgelöst
