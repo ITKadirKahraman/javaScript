@@ -43,3 +43,22 @@ newDiv.textContent = "Ich bin ein neu erzeugter Div mit einem Textinhalt.";
 // Ein vorhandenes Element auswählen und das neue Element anhängen
 document.appendChild(newDiv);
 ```
+
+5. Events für die Durchführung von Ereignisse
+- onclick="funktion('id')": Beim Klicken wird eine Funktion durchgeführt
+- onkeydown
+- onchange
+- mousedown
+- mouseleave
+- mouseover
+- touchstart
+- touchend
+
+```javascript
+// Ein neues Element erstellen
+const newDiv = document.createElement("div");
+newDiv.textContent = "Ich bin ein neu erzeugter Div mit einem Textinhalt.";
+
+// Ein vorhandenes Element auswählen und das neue Element anhängen
+document.appendChild(newDiv);
+```
