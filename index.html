@@ -1,23 +1,62 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-</head>
-<body>
-    <header></header>
-    <main>
-        <h1>Hallo</h1>
-        <div>
-            <input type="checkbox" onclick="duppleLoop()">
-            <input type="checkbox" onclick="human()">
-            <input type="checkbox" onclick="fullName()">
-            <input type="checkbox" onclick="last()">
-        </div>
-    </main>
-    <footer></footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <style>
+            .green_bg{
+                background-color: green;
+                width: 50px;
+                height: 50px;
+                border-radius: 40px;
+            }
+
+            .blue_bg{
+                background-color: blue;
+                width: 200px;
+                height: 30px;
+            }
+
+            .testClass {
+                font-size: 20px;
+            }
+
+            .d_none {
+                display: none;
+            }
+        </style>
+    </head>
+    <body onload="console.log(123)">
+        <header></header>
+        <main>
+            <h1 id="website_title">Hallo</h1>
+            <div>
+                <div id="test_id" class="mainDiv"></div>
+                <div id="test_id2" class="mainDiv2"></div>
+                <div id="buttonTest" class="button"></div>
+                <div id="aufgabe"></div>
+            </div>
+            <div>
+                <input type="checkbox" onclick="duppleLoop()">
+                <input type="checkbox" onclick="human()">
+                <input type="checkbox" onclick="fullName()">
+                <input type="checkbox" onclick="last()">
+                <input id="cbox" type="number" value="1" id="inputId">
+                <input onkeyup="console.log('onkeyup')" onkeydown="console.log('onkeydown')" type="number" value="10" id="input_Id">
+                <input onfocus="console.log('Ich bin Fokus')" onkeyup="console.log('onkeyup')" type="text" value="text">
+            </div>
+            <div>
+                <input onchange="console.log('Ich bin der Neue in der Gruppe.')" type="text" value="Text von Kadir">
+                <p id="ourPTag">Ich bin ein P Tag, und bin auch dabei.</p>
+                <button onclick="toggleDNone('ourPTag')">P Tag entfernen</button>
+                <button mousedown="console.log('Gedrückt!')" onclick="toggleDNone('cbox')">Input entfernen</button>
+                <input onkeydown="console.log('onkeydown')" onkeyup ="console.log('onkeyup')" onclick="onkeyFunktion('onkeyAufgabe')" id="onkeyAufgabe" type="text">
+                <p id="pTagAddEvenListener">Ich bin ein Test für addEventListener</p>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
     <script src="basics.js"></script>
     <script src="akademie.js"></script>
     <script src="w3Schools.js"></script>
