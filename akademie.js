@@ -680,3 +680,38 @@ Hinweis: Beliebig heißt hier, dass die id aus dem Parameter der Funktion genomm
 function cssClassAddOrRemove(id) {
    return document.getElementById(id).classList.toggle('d_none');
 }
+
+/*
+****** EVENTS
+*/
+
+// onclick -> auf Events im DOM/HTML reagieren
+// Mit JavaScript HTML ausführen
+// die onclick Funktion schreiben wir ins HTML und 
+
+function toggleDNone(id) {
+    return document.getElementById(id).classList.toggle('d_none');
+}
+
+// onclick Alternativen (onchange, onkeydown, onload, onkeyup, onfokus) das sind die grundlegenden Events 
+// ausporbieren: mousedown, mouseleave, mouseover, touchstart, touchend
+
+// Aufgabe: onkeyup / onkeydown
+// Erstell ein Inputfeld mit einer selbsr gewählten id
+// Erstelle eine Funktion, die den Value dieses Inputfeldes aus loggt
+// Vergleich nun den log von onkeyup und onkeydown. Siehst du einen Unterschied?
+
+function onkeyFunktion(id) {
+    let wert = document.getElementById(id).value;
+    console.log(wert);
+}
+
+/*
+****** addEvenListener
+*/
+
+document.getElementById("pTagAddEvenListener").addEventListener("click", logger);
+
+function logger() {
+    console.log(1234);
+}
