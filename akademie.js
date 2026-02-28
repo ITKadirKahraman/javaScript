@@ -2,6 +2,7 @@
 ****** DEVELOPER AKADEMIE
 */
 
+
 /*
 ****** IN JAVASCRIPT ist alles ein Objekt
 */
