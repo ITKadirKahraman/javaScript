@@ -2,7 +2,6 @@
 ****** DEVELOPER AKADEMIE
 */
 
-
 /*
 ****** IN JAVASCRIPT ist alles ein Objekt
 */
@@ -656,8 +655,8 @@ document.getElementById('buttonTest').classList.add('green_bg');
 
 // setAttribute und value
 // setAttribut kann alle Attribute von HTML Tags ändern
-document.getElementById('inputId').setAttribute('type', 'text');
-document.getElementById('inputId').setAttribute('value', 'Hallo, ich bin Kadir');
+//document.getElementById('inputId').setAttribute('type', 'text');
+//document.getElementById('inputId').setAttribute('value', 'Hallo, ich bin Kadir');
 
 document.getElementById('input_Id').value = 12032;
 
@@ -667,7 +666,7 @@ document.getElementById('input_Id').value = 12032;
 // Aufgabe 5 und 6: Probiere es aus und füge jeweils mit setAttribut und classList jeweils eine Klasse hinzu
 // Als Entwickler ist es wichtig, dass du sachen ausprobierst, dass macht ein Entwickler aus
 document.getElementById('aufgabe').innerHTML = "<p id='aufgabeP' title='Freiheit für P'>Ich bin ein Textaufgabe.</p>"
-document.getElementById('aufgabeP').setAttribute('class', 'test_class');
+//document.getElementById('aufgabeP').setAttribute('class', 'test_class');
 document.getElementById('aufgabe').classList.add('testClass');
 
 
@@ -716,3 +715,84 @@ document.getElementById("pTagAddEvenListener").addEventListener("click", logger)
 function logger() {
     console.log(1234);
 }
+
+
+/*
+****** Array´s and Loops
+*/
+
+// Array Basics
+// zwischen den Elementen soll nicht "empty" stehen
+// Array Methoden Elemente hinzufügen push() sowie entfernen pop()
+//    Elemente  0   1   2   3   4   5   6   7   8
+let oneArray = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+let mixArray = [12, "Banana", true, false];
+let cars = ["ford", "bmw", "benz", "togg"];
+mixArray[3] = "Erdbeer";
+cars[4] = "porsche";
+cars[6] = "ferrari";
+cars.push("tesla", "toyota", "honda", "seat");
+let lastElement = cars.pop();
+function initArray() {
+    console.log(mixArray + " " + oneArray);
+    // bestimmtes Element aufrufen
+    console.log(mixArray[1]);
+    console.log(cars);
+    console.log("The last Element from Array: " + lastElement);
+}
+
+// Funktionsaufruf
+initArray();
+
+// Array Methode includes returns true if a string contains a specified string
+function containsElements(array, element, elementIndex) {
+    return array.includes(element, elementIndex);
+}
+
+console.log(containsElements(cars, "togg", 3)); // true
+
+// Arrays Aufgaben
+// Aufgabenstellung 1: includes
+let firstNames = ["Anne", "Ben", "Clara", "Kadir", "Cara", "Dirk"];
+
+function containsElement(array, element) {
+    return array.includes(element);
+}
+
+console.log(containsElement(firstNames, "Anne")); // true
+console.log(containsElement(firstName, "Daniel")); // false
+
+// Aufgabenstellung 2: indexOf
+function findElement(array, element) {
+    return array.indexOf(element);
+}
+
+console.log(findElement(firstNames, "Clara")); // 2
+
+// Aufgabenstellung 3: shift
+function removeFirstElement(array) {
+    return array.shift();
+}
+
+console.log(removeFirstElement(firstNames)); // Anne
+
+// Aufgabenstellung 4: unshift
+function addElementToStart(array, element) {
+    return array.unshift(element);
+}
+
+console.log(addElementToStart(firstNames, "Anna"));
+
+// Aufgabenstellung 5: slice
+function getSubArray(array, start, end) {
+    return array.slice(start, end);
+}
+
+console.log(getSubArray(firstNames, 1, 5)); // Ben, Clara, Kadir, Cara
+
+// Aufgabenstellung 6: join
+function joinArrays(array, separator) {
+    return array.join(separator);
+}
+
+console.log(joinArrays(firstNames, ':')); // Anna:Ben:Clara:Kadir:Cara:Dirk
