@@ -796,3 +796,19 @@ function joinArrays(array, separator) {
 }
 
 console.log(joinArrays(firstNames, ':')); // Anna:Ben:Clara:Kadir:Cara:Dirk
+
+
+// For Loop Basics
+// durch Arrays iterieren
+let namen = ["Kadir Kahraman", "Melek Cosgun", "Mihrima Nur Kahraman", "Sertan Cosgun", "Murat Kahraman", "Sinan Kahraman"];
+function initArrays() {
+    let contentRef = document.getElementById('myContentArray');
+    contentRef.innerHTML = "";
+    let fullName = [];
+    for (let index = 0; index < namen.length; index++) {
+        fullName[index] = " " + namen[index];
+        contentRef.innerHTML = fullName;
+    }
+}
+
+console.log(initArrays());
