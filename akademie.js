@@ -806,9 +806,80 @@ function initArrays() {
     contentRef.innerHTML = "";
     let fullName = [];
     for (let index = 0; index < namen.length; index++) {
-        fullName[index] = " " + namen[index];
+        fullName[index] = `<p>${" " + "(" + index + ")" + " " + namen[index]}`;
         contentRef.innerHTML = fullName;
     }
+    return contentRef;
 }
 
 console.log(initArrays());
+
+// For Loop mit Arrays iterieren Aufgaben
+// Aufgabenstellung 1: Summe der Elemente eines Arrays
+
+let number = [1, 3, 4, 5, 2, 6, 9, 8, 7, 10];
+function sumArray() {
+    let sum = 0;
+    for(let i = 0; i < number.length; i++){
+        sum += number[i];
+    }
+    return sum;
+}
+
+console.log(sumArray());
+
+// Aufgabenstellung 2: Elemente in aufsteigender Reihenfolge ausgeben
+function sortArrays() {
+    let sort = 0;
+    for(let i = 0; i < number.length; i++){
+        sort = number.sort((a, b) => a - b);
+    }
+    return sort;
+}
+
+console.log(sortArrays())
+
+// Aufgabenstellung 3: Elemente in absteigende Reihenfolge ausgeben
+function reverseArrays() {
+    let array = [];
+    for(let i = number.length - 1; i >= 0; i--){
+        array.push(number[i]);
+    }
+    return array;
+}
+
+let reverseRef = document.getElementById('reverseArrayHTML');
+reverseRef.innerHTML =`<p>Wir geben die Number umgekehrt raus, mit innerHTML DOM Methode: ${reverseArrays()}</p>`;
+console.log(reverseArrays());
+
+// Aufgabenstellung 4: Nur jedes dritte Element ausgeben
+function everyThreeElement() {
+    let array = [];
+    for(let i = 0; i < number.length; i+=3){
+        array.push(number[i]);
+    }
+    return array;
+}
+
+let threeElementRef = document.getElementById('everyThreeElementsHTML');
+threeElementRef.innerHTML = `<p>${everyThreeElement()}</p>`;
+console.log(everyThreeElement());
+
+// Aufgabenstellung 5: Primzahl ausgeben
+function primNumber(number) {
+    if(number <= 1){
+        return false;
+    }
+
+    for(let i = 2; i * i <= number; i++){
+        if(number % i === 0){
+            return false;
+        }
+    }
+
+    return true;
+}
+
+let primRef = document.getElementById('primHTML');
+primRef.innerHTML = `<p>${primNumber(10)}</p>`
+console.log(primNumber(5));
