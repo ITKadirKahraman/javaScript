@@ -883,3 +883,49 @@ function primNumber(number) {
 let primRef = document.getElementById('primHTML');
 primRef.innerHTML = `<p>${primNumber(10)}</p>`
 console.log(primNumber(5));
+
+
+// For Loop with break and continue
+function breakContinue(one) {
+    let string = "";
+    for (let index = 0; index < one.length; index++) {
+        string = one[index];
+        
+        if (one[index] == "error") {
+            console.error("If Bedingung wurde erfüllt. Fehler im Array.")
+            break;
+        }
+    }
+    return string;
+}
+
+console.log(breakContinue([1, 2, 3, 1, 2, 3, "error", 1, 2, 3])); // Ausgabe: error
+
+function breakContinue2(one) {
+    let sum = 0;
+    for(let i = 0; i < one.length; i++){
+
+        if(one[i] == "one"){
+            continue;
+        }
+        sum += one[i];
+
+        if(one[i] == "fehlermeldung"){
+            console.error("Fehlermeldung: Bedingung wurde erfüllt");
+            break;
+        }
+    }
+    return sum;
+}
+
+console.log(breakContinue2([1, 2, 3, 1, 2, 3, "fehlermeldung", 1, 2, 3])); // Ausgabe: 12fehlermeldung
+console.log(breakContinue2([1, 2, 3, 1, 2, 3, "one", 1, 2, 3])); // Ausgabe: 18
+
+
+function initClassList() {
+    let classListRef = document.getElementsByClassName('redBox');
+    for(let i = 0; i < classListRef.length; i++){
+        let singleRef = classListRef[i];
+        singleRef.innerText = i;
+    }   
+}
