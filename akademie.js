@@ -921,11 +921,33 @@ function breakContinue2(one) {
 console.log(breakContinue2([1, 2, 3, 1, 2, 3, "fehlermeldung", 1, 2, 3])); // Ausgabe: 12fehlermeldung
 console.log(breakContinue2([1, 2, 3, 1, 2, 3, "one", 1, 2, 3])); // Ausgabe: 18
 
-
 function initClassList() {
     let classListRef = document.getElementsByClassName('redBox');
     for(let i = 0; i < classListRef.length; i++){
         let singleRef = classListRef[i];
         singleRef.innerText = i;
     }   
+}
+
+console.log(initClassList());
+
+/*
+****** Weitere Schleifenarten: While und ForEach
+*/
+
+function whileLoop(n) {
+    let i = 0;
+    while(i < n){
+        i++;
+        console.log("für es solange aus, bis n erreicht wurde:" + " " + i);
+    }
+    // while loop is indificatit with for loop
+}
+
+console.log(whileLoop(10));
+
+function forEach(){
+    number.forEach(element => {
+        console.log(element);
+    });
 }
