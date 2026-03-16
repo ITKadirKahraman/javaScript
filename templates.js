@@ -35,13 +35,18 @@
             border-radius: 50%;
             background-color: red;
             padding: 20px;
+            box-shadow: -4px 9px 10px rgba(0, 0, 0,0.4);
+        }
+
+        div {
+            margin-bottom: 20px;
         }
     </style>
 
     <script>
-        let name = 'Frederick'; // Für Aufgabe 4
+        let name = 'Claus'; // Für Aufgabe 4
 
-        /**
+        /*
          * Aufgabe 1 
          */
         function joke1() {
@@ -76,7 +81,7 @@
             <br>Spaziergang 1.0, 2.0 oder gleich 3.0?“ 💻🚶‍♂️`;
         }
 
-        /**
+        /*
          * Aufgabe 2 
          */
         // Erkläre den Unterschied von = und +=
@@ -96,34 +101,38 @@
             document.getElementById('food').innerHTML = '';
         }
 
-        /**
+        /*
          * Aufgabe 3 
          */
-        function generatedCircle() {
+        function generatedCircle() {    
             document.getElementById('generatedHTML').innerHTML = `
             <div class="circle">
-                Kreis    
+                <b>${name}</b>    
             </div>
             `;
         }
 
-        /**
+        /*
          * Aufgabe 4 (Hilfsfunktion um den Namen zu ändern) 
          */
         function setName(n) {
             name = n;
+            generatedCircle();
         }
 
-        /**
-         * Aufgabe 5 
+        /*
+         * Aufgabe 5
          */
         function sendMessage() {
             let message = document.getElementById('message'); // HTML Element mit ID message wird an die Variable 'message' zugewiesen. 
             let chat = document.getElementById('chat');
+            let name = document.getElementById('name');
 
-            chat.innerHTML += `
-            <div>Unbekannt: ${message.value}</div>
-            `;
+            if(message.value.length > 0){
+                chat.innerHTML += `
+                <div><i>${name.value}</i>: ${message.value}</div>
+                `;
+            }
 
             message.value = ''; // Inhalt von Textfeld mit id "message" löschen
         }
@@ -187,6 +196,7 @@
 
     <button onclick="setName('Franz')">Franz</button>
     <button onclick="setName('Gundula')">Gundula</button>
+    <button onclick="setName('Henriette')">Henriette</button>
 
 
     <p>
@@ -198,6 +208,7 @@
         <br> 5.5. Wenn das Textfeld mit der ID <code>message</code> leer ist, kann eine Nachricht immernoch gesendet werden. Sorge durch eine If-Abfrage dafür, dass ein Textfeld mit der ID <code>message</code> IMMER ausgefüllt sein muss.<br> <i>Tipp: mit  <code>message.value.length</code> erhälst du die Länge des Textes, der in das Textfeld geschrieben wurde.</i>
     </p>
 
+    <input type="text" id="name" placeholder="Namen eingeben...">
     <input type="text" id="message" placeholder="Nachricht eingeben..."> <button onclick="sendMessage()">Senden</button>
     <div id="chat">
 
