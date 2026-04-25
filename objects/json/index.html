@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Objects</h1>
+    <script>
+        let contact = [
+            {
+                "name": "Kadir",
+                "alter": 33,
+                "adresse": {
+                    "strasse": "Hammerstraße",
+                    "postleitzahl": 48153,
+                    "ort": "Münster"
+                },
+                "hobbies": ["Schach", "Coden", "Lesen"]
+            },
+            {
+               "name": "Melek",
+                "alter": 32,
+                "adresse": {
+                    "strasse": "Huhnstraße",
+                    "postleitzahl": 55120,
+                    "ort": "München"
+                },
+                "hobbies": ["Essen", "Reden", "Telefonieren"] 
+            }
+        ];
+
+        console.log(contact[0].adresse.strasse);
+        console.log(contact[1].name);
+        console.log(contact[1].hobbies[0]);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
