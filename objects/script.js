@@ -80,3 +80,22 @@ let person2 = {
 };
 
 person2.job('Cyber Security Developer.');
+
+
+// object keys and entries
+
+console.log("");
+console.log(Object.entries(person2));
+let objKeys = Object.keys(person2);
+
+function ourA(person2, objKeys) {
+    let ourArray = [];
+    for (let i = 0; i < objKeys.length; i++) {
+        ourArray.push(person2[objKeys[i]]);
+    }
+    return ourArray;
+}
+
+console.table(ourA(person2, objKeys));
+const result = ourA(person2, objKeys);
+console.log(result);
