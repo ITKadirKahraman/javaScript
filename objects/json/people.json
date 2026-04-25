@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "Stefan",
+        "alter": 21,
+        "kenntJSON": true
+    },
+    {
+        "name": "Boss",
+        "alter": 33,
+        "kenntJSON": true
+    },
+    {
+        "name": "Loser",
+        "alter": null,
+        "adresse": {
+                "strasse": "Hammerstraße",
+                "postleitzahl": 48153,
+                "ort": "Münster"
+            },
+        "hobbies": ["Schach", "Coden", "Lesen"]
+    }
+]
